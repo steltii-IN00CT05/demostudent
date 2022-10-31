@@ -1,26 +1,29 @@
 package com.studentsys.demostudent.data;
 
 public class Course {
-    private String cname;
-    private String teacher;
-    private int room;
-    private int cid;
+    private String courseName = "";
+    private String teacher = "";
+    private int courseId = 0;
 
     public static int count = 0;
 
-    public Course(String cname, String teacher, int room){
-        this.cname = cname;
-        this.teacher = teacher;
-        this.room = room;
-        this.cid = count++;
-    }
-    
-    public String getCname() {
-        return this.cname;
+    public Course(){
+        this("","");
     }
 
-    public void setCname(String cname) {
-        this.cname = cname;
+    public Course(String courseName, String teacher){
+        this.courseName = courseName;
+        this.teacher = teacher;
+        
+        this.courseId = count++;
+    }
+    
+    public String getCourseName() {
+        return this.courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName;
     }
 
     public String getTeacher() {
@@ -31,16 +34,8 @@ public class Course {
         this.teacher = teacher;
     }
     
-    public int getRoom() {
-        return this.room;
-    }
-
-    public void setRoom(int room) {
-        this.room = room;
-    }
-    
-    public int getCid() {
-        return this.cid;
+    public int getCourseId() {
+        return this.courseId;
     }
     
     
